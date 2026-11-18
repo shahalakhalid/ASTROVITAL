@@ -377,14 +377,61 @@ with tab3:
 # ---------------- NASA RESEARCH INTEGRATION ----------------
 
 st.markdown("---")
-st.header("🧪 NASA Space Health Research")
 
-st.write(
-    "ASTROVITAL uses NASA space-health research as a scientific "
-    "reference for understanding how spaceflight affects the human body."
+st.subheader("🛰️ NASA OSD-574 | Inspiration4 Microbiome Study")
+
+st.info(
+    "Research dataset: NASA OSD-574. "
+    "This study examines skin microbiome data from four Inspiration4 crew members. "
+    "It is not live astronaut vital-sign data."
 )
 
-st.subheader("🛰️ NASA OSD-574 | Inspiration4 Mission")
+st.markdown("### Dataset summary")
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.metric("Crew members", "4")
+
+with col2:
+    st.metric("Metagenomic samples", "8")
+
+with col3:
+    st.metric("Sampling time points", "2")
+
+st.markdown("### Sampling details")
+
+st.write("""
+- Pre-flight: L-44
+- Post-flight: R+1
+- Sample type: Deltoid skin microbiome
+- Data type: Metagenomic sequencing
+""")
+
+st.markdown("### Reported research observation")
+
+st.write("""
+The uploaded research documentation reports an increase in the
+mean human-read fraction from approximately 31% before flight
+to 62% after flight.
+
+These are reported research-document values, not results
+independently calculated by this application.
+""")
+
+st.warning(
+    "This dataset does not provide live heart rate, SpO₂ or "
+    "body-temperature measurements. No clinical conclusion "
+    "should be drawn from these microbiome observations."
+)
+
+st.markdown("### NASA research sources")
+
+st.markdown("[NASA Open Science Data Repository](https://osdr.nasa.gov/)")
+
+st.markdown("[NASA OSD-574 study](https://osdr.nasa.gov/bio/repo/data/studies/OSD-574)")
+
+st.markdown("[NASA Human Research Program](https://www.nasa.gov/hrp/)")
 
 st.write(
     "**Study title:** SpaceX Inspiration4 Deltoid Skin and Microbiome Data"
